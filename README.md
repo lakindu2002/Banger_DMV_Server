@@ -20,3 +20,4 @@ This repository has been created and maintained by <b>Lakindu Hewawasam</b>
 - Clone repository using `ssh` link
 - Run `npm install`
 - Run `npm start`
+- Change the `requiredPort = 5000;` to a port that is vacant is it is in use already. (declard in `app.js`)
