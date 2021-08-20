@@ -1,4 +1,5 @@
-const express = require("express"); //load the express module.
+import express from "express"; //load the express module.
+
 const app = express(); //initialize the server
 const requiredPort = 5000; //change to a vacant port if 5000 is in use
 
