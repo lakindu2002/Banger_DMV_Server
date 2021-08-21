@@ -5,8 +5,11 @@ const app = express(); //initialize the server
 const requiredPort = process.env.DEPLOY_PORT; //change to a vacant port if 5000 is in use
 
 const configuredRoutes = require("./routes/routes"); //require the routes created for the API
+const interceptors = require("./interceptors/auth.interceptor");
 
-app.get("/", (req, res) => {
+app.use(interceptors.authenticateBangerClient);
+
+app.get("/", async (req, res) => {
     //when base path is loaded, redirect to csv
     res.redirect("/csv/get");
 });
