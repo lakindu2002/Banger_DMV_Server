@@ -1,6 +1,8 @@
+require("dotenv").config(); //load the env data from the .env file
+
 const express = require("express");
 const app = express(); //initialize the server
-const requiredPort = 5000; //change to a vacant port if 5000 is in use
+const requiredPort = process.env.DEPLOY_PORT; //change to a vacant port if 5000 is in use
 
 const configuredRoutes = require("./routes/routes"); //require the routes created for the API
 
